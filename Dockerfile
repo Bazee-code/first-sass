@@ -54,7 +54,7 @@ RUN pip install -r /tmp/requirements.txt
 # run any other commands that do not need the database
 # such as:
 
-RUN python manage.py vendor-pull 
+# RUN python manage.py vendor-pull 
 RUN python manage.py collectstatic --noinput
 
 # set the Django default project name

@@ -16,6 +16,7 @@ class Command (BaseCommand):
        self.stdout.write("Downloading vendor static files")
 
        completed_urls = []
+
        
        for name, url in VENDOR_STATICFILES.items():
            out_path = STATICFILES_VENDOR_DIR / name
