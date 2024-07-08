@@ -1,5 +1,12 @@
 # Byte-compiled / optimized / DLL files
 .DS_Store
+
+# ignore vendor files
+src/staticfiles/vendors
+
+# ignore local static file root
+local-cdn/
+
 __pycache__/
 *.py[cod]
 *$py.class
