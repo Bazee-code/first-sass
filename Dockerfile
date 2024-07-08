@@ -37,6 +37,13 @@ WORKDIR /code
 # Copy the requirements file into the container
 COPY requirements.txt /tmp/requirements.txt
 
+
+ARG SECRET_KEY
+ENV SECRET_KEY=${SECRET_KEY}
+
+ARG DJANGO_DEBUG
+ENV DJANGO_DEBUG=${DJANGO_DEBUG}}
+
 # copy the project code into the container's working directory
 COPY ./src /code
 
