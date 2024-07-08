@@ -41,7 +41,7 @@ COPY requirements.txt /tmp/requirements.txt
 ARG SECRET_KEY
 ENV SECRET_KEY=${SECRET_KEY}
 
-ARG DJANGO_DEBUG
+ARG DJANGO_DEBUG=0
 ENV DJANGO_DEBUG=${DJANGO_DEBUG}
 
 # copy the project code into the container's working directory
