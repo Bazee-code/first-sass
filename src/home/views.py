@@ -7,6 +7,9 @@ from visits.models import Visit
 this_dir = pathlib.Path(__file__).resolve().parent
 
 def home_view (request, *args, **kwargs): 
+    print('auth',request.user.is_authenticated)
+    if(request.user.is_authenticated):
+        print('first name',request.user.first_name)
     return about_view(request, *args, **kwargs)
 
 def about_view(request, *args, **kwargs):
