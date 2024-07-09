@@ -23,6 +23,7 @@ from auth import views as auth_views
 urlpatterns = [
     path('',home_view), #root page
     path('login/',auth_views.login_view),
+    path('register/',auth_views.register_view),
     path('about/',about_view),
     path('admin/', admin.site.urls),
 ]
