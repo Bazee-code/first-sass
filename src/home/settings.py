@@ -70,10 +70,14 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
+    'allauth_ui',
     'allauth',
     'allauth.account',
-
     'allauth.socialaccount',
+    'allauth.socialaccount.providers.github',
+    'widget_tweaks',
+    'slippers',
+
     # my-apps
     'visits',
     # 'downloaders'
@@ -94,11 +98,13 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'home.urls'
 
+ALLAUTH_UI_THEME = "light"
+
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': [BASE_DIR / 'templates'],
-        'APP_DIRS': True,
+        'APP_DIRS': False,
         'OPTIONS': {
             'context_processors': [
                 'django.template.context_processors.debug',
@@ -162,6 +168,11 @@ AUTH_PASSWORD_VALIDATORS = [
 ]
 
 # Django allauth configs
+LOGIN_REDIRECT_URL = '/'
+ACCOUNT_AUTHENTICATION_METHOD = 'username_email'
+ACCOUNT_EMAIL_REQUIRED = True
+ACCOUNT_EMAIL_VERIFICATION= 'mandatory'
+
 AUTHENTICATION_BACKENDS = [
     
     # Needed to login by username in Django admin, regardless of `allauth`

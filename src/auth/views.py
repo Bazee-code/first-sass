@@ -9,6 +9,7 @@ User = get_user_model()
 
 def login_view(request, *args, **kwargs):
 
+
     if request.method == 'POST':
         username = request.POST['username'] 
         password = request.POST['password'] 
